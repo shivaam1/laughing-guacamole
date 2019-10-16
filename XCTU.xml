@@ -1,0 +1,34 @@
+void setup()
+{
+pinMode(5,OUTPUT);
+pinMode(6,OUTPUT);
+pinMode(7,OUTPUT);
+pinMode(8,OUTPUT);
+Serial.begin(9600); 
+}
+void forward() 
+{
+digitalWrite(5,HIGH);
+digitalWrite(6,LOW);
+digitalWrite(7,LOW);
+digitalWrite(8,HIGH); 
+}
+void loop()
+ {
+if(Serial.available()>0) 
+{
+Char s
+=Serail.read();
+if(S== ‘G’) {
+forward(); }
+
+18
+
+else
+{
+digitalWrite(5,LOW);
+digitalWrite(6,LOW);
+digitalWrite(7,LOW);
+digitalWrite(8,LOW);
+
+}
